@@ -11,24 +11,20 @@ server.get('/api/users', (req, res) => {
 	]);
 });
 
-server.post('/api/register', (req, res) => {
-	if (req.body.username == null && req.body.password = null) {
-		res.status(400).json({message: 'Looks like you are missing a username or password'});
-	} else {
-		res.status(201).json({
-			username: req.body.username,
-			password: req.body.password
-		});
-	}
-});
+// server.post('/api/register', (req, res) => {
+// 	res.json({
+// 			username: req.body.username,
+// 			password: req.body.password
+// 		});
+// });
 
-server.post('/api/login', (req, res) => {
-	if (req.body.username == null || !req.body.password == null) {
-		res.status(400).json({message: 'Looks like you are missing a username or password'});
-	} else {
-		res.json({message: `Welcome back, ${req.body.username}!`});
-	};
-});
+// server.post('/api/login', (req, res) => {
+// 	if (req.body.username == null || !req.body.password == null) {
+// 		res.status(400).json({message: 'Looks like you are missing a username or password'});
+// 	} else {
+// 		res.json({message: `Welcome back, ${req.body.username}!`});
+// 	};
+// });
 
 require('dotenv').config();
 const PORT = process.env.PORT || 8080;
