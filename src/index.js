@@ -1,5 +1,6 @@
 const express = require('express');
 const res = require('express/lib/response');
+
 const server = express();
 server.use(express.json());
 
@@ -11,12 +12,14 @@ server.get('/api/users', (req, res) => {
 	]);
 });
 
-// server.post('/api/register', (req, res) => {
-// 	res.json({
-// 			username: req.body.username,
-// 			password: req.body.password
-// 		});
-// });
+server.post('/api/register', (req, res) => {
+	const newUser = {
+		username: req.body.username,
+		password: req.body.password
+	};
+	console.log(newUser);
+	res.status(201).json(newUser);
+});
 
 // server.post('/api/login', (req, res) => {
 // 	if (req.body.username == null || !req.body.password == null) {
