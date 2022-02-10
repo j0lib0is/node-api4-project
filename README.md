@@ -30,7 +30,7 @@ Your assignment page on Canvas should contain instructions for submitting this p
         | POST   | /api/register | Creates a user from { username, password } in the `request body`, responds with newly created user. |
         | POST   | /api/login    | Checks { username, password } in the `request body`, responds with a welcome message.               |
 
--   [ ] Deploy your app to [Heroku](https://heroku.com). The link to the deployed API is your submission deliverable
+-   [x] Deploy your app to [Heroku](https://heroku.com). The link to the deployed API is your submission deliverable
 
 ### Important Notes
 
