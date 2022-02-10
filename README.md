@@ -10,7 +10,7 @@ Your assignment page on Canvas should contain instructions for submitting this p
 
 ### Task 2: Minimum Viable Product
 
--   [ ] Build a simple API:
+-   [x] Build a simple API:
 
     -   [x] Create a `.gitignore` file executing `npx gitignore node`
     -   [x] Create a `package.json` file executing `npm init --y`
@@ -22,7 +22,7 @@ Your assignment page on Canvas should contain instructions for submitting this p
             [x] `cors`
             [x] `nodemon`
     -   [x] Add support for environment variables using an `.env` file and the dotenv library, providing fallbacks in the code
-    -   Flesh out the API:
+    -   [x] Flesh out the API:
 
         | Method | URL           | Description                                                                                         |
         | ------ | ------------- | --------------------------------------------------------------------------------------------------- |

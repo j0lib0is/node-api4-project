@@ -17,17 +17,16 @@ server.post('/api/register', (req, res) => {
 		username: req.body.username,
 		password: req.body.password
 	};
-	console.log(newUser);
 	res.status(201).json(newUser);
 });
 
-// server.post('/api/login', (req, res) => {
-// 	if (req.body.username == null || !req.body.password == null) {
-// 		res.status(400).json({message: 'Looks like you are missing a username or password'});
-// 	} else {
-// 		res.json({message: `Welcome back, ${req.body.username}!`});
-// 	};
-// });
+server.post('/api/login', (req, res) => {
+	if (!req.body.username || !req.body.password) {
+		res.status(400).json({message: 'Looks like you are missing a username or password'});
+	} else {
+		res.json({message: `Welcome back, ${req.body.username}!`});
+	};
+});
 
 require('dotenv').config();
 const PORT = process.env.PORT || 8080;
